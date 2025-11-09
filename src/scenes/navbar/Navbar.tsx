@@ -1,5 +1,5 @@
 import { Container } from '../../container/container'
-import { Github, Instagram, Menu, Send } from 'lucide-react'
+import { Github, Instagram, Menu, Send, X } from 'lucide-react'
 import useMediaQuery from '../../hooks/useMediaQuery'
 import { useState } from 'react'
 
@@ -35,13 +35,16 @@ const Navbar = ({ }: Props) => {
                             </button>
                         )}
                         {!isMedium && isMenuToggled && (
-                            <div className='p-[30px] flex flex-col items-center justify-between fixed right-0 bottom-0 z-40 h-full w-[300px] bg-light-yellow drop-shadow-xl'>
-                                <ul className='flex flex-col gap-5 mb-10'>
+                            <div className='p-[30px] flex flex-col items-start justify-between fixed right-0 bottom-0 z-40 h-full w-[140px] bg-light-yellow drop-shadow-xl'>
+                                <button onClick={() => setIsMenuToggled(false)} >
+                                    <X className='text-dark-blue' />
+                                </button>
+                                <ul className='text-xl text-dark-blue flex flex-col gap-5 mb-10'>
                                     <li>Home</li>
                                     <li>About</li>
                                     <li>Work</li>
                                 </ul>
-                                <div className='flex gap-[10px] items-center'>
+                                <div className='flex gap-2.5 items-center'>
                                     <Github size={20} className='text-dark-blue' />
                                     <Send size={20} className='text-dark-blue' />
                                     <Instagram size={20} className='text-dark-blue' />
