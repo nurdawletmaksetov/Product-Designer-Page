@@ -12,7 +12,7 @@ const Navbar = ({ }: Props) => {
     const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
     return (
         <>
-            <header className='py-[30px] top-0 sticky z-30'>
+            <header className='bg-light-yellow py-[30px] top-0 sticky z-30'>
                 <Container>
                     <div className='flex items-center justify-between'>
                         <p className='font-semibold text-dark-blue text-[24px]'>John Doe</p>

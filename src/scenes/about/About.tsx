@@ -1,0 +1,53 @@
+import { Container } from '../../container/container'
+import type { AboutType } from '../../shared/types'
+
+const about: Array<AboutType> = [
+    {
+        year: "2014-2018",
+        text:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.",
+    },
+    {
+        year: "2018-2020",
+        text:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.",
+    },
+    {
+        year: "2020 - Present",
+        text:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.",
+    }
+]
+
+type Props = {}
+
+const About = ({ }: Props) => {
+    return (
+        <>
+            <section className='py-10'>
+                <Container>
+                    <h1 className='font-extrabold text-7xl sm:text-[100px] pb-5 sm:pb-8 text-toolight-yellow'>about.</h1>
+                    <p className='text-xl sm:text-[24px] text-dark-blue md:w-[70%]'>
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                        Amet vulputate tristique quam felis.
+                        Id phasellus dui orci vulputate consequat nulla proin.
+                        Id sit scelerisque neque, proin bibendum diam.
+                    </p>
+                    <div className='py-[60px] sm:py-[145px]'>
+                        <ul className='pl-[10%] xs:pl-[20%] flex flex-col gap-10 sm:gap-20'>
+                            {about.map((about: AboutType) => (
+                                <li className='list-disc text-dark-blue'>
+                                    <p className='font-semibold pb-1.5 sm:pb-2.5 text-[20px] sm:text-[24px]'>{about.year}</p>
+                                    <p className='text-[20px] sm:text-[24px]'>{about.text}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </Container>
+            </section>
+        </>
+    )
+}
+
+export default About

@@ -21,9 +21,9 @@ const Home = ({ }: Props) => {
                             <button className="mt-10 border-0 bg-transparent"><img src={Button} /></button>
                         </div>
                         <div className="relative flex justify-center">
-                            <img className="absolute right-20 sm:right-0 top-0 md:right-0" src={Plus} alt="" />
+                            <img className="absolute right-20 sm:right-0 top-0 md:right-0 hidden sm:block" src={Plus} alt="" />
                             <img src={John} />
-                            <img className="absolute left-20 sm:left-0 md:left-0 bottom-25" src={Slash} alt="" />
+                            <img className="absolute left-20 sm:left-0 md:left-0 bottom-25 hidden sm:block" src={Slash} alt="" />
                         </div>
                     </div>
                 </Container>
