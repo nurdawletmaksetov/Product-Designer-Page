@@ -67,9 +67,15 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                                     />
                                 </ul>
                                 <div className='flex gap-[29px] items-center'>
-                                    <Github size={26} className='text-dark-blue' />
-                                    <Send size={26} className='text-dark-blue' />
-                                    <Instagram size={26} className='text-dark-blue' />
+                                    <a href="https://github.com/nurdawletmaksetov">
+                                        <Github size={26} className='text-dark-blue' />
+                                    </a>
+                                    <a href="https://t.me/techcybernet">
+                                        <Send size={26} className='text-dark-blue' />
+                                    </a>
+                                    <a href="https://www.instagram.com/m_nurdawlet/">
+                                        <Instagram size={26} className='text-dark-blue' />
+                                    </a>
                                 </div>
                             </>
                         ) : (

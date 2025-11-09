@@ -33,22 +33,42 @@ const Work = ({ setSelectedPage }: Props) => {
                     onViewportEnter={() => setSelectedPage(SelectedPage.Work)}
                 >
                     <Container>
-                        <h1 className="font-extrabold text-7xl sm:text-[100px] pb-5 sm:pb-8 text-toolight-yellow">work.</h1>
-                        <p className="text-xl sm:text-[24px] text-dark-blue md:w-[70%]">
-                            Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit.
-                            Amet vulputate tristique quam felis.
-                            Id phasellus dui orci vulputate consequat nulla proin.
-                            Id sit scelerisque neque, proin bibendum diam.
-                        </p>
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ duration: 0.5 }}
+                            variants={{
+                                hidden: { opacity: 0, x: -50 },
+                                visible: { opacity: 1, x: 0 }
+                            }}
+                        >
+                            <h1 className="font-extrabold text-7xl sm:text-[100px] pb-5 sm:pb-8 text-toolight-yellow">work.</h1>
+                            <p className="text-xl sm:text-[24px] text-dark-blue md:w-[70%]">
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit.
+                                Amet vulputate tristique quam felis.
+                                Id phasellus dui orci vulputate consequat nulla proin.
+                                Id sit scelerisque neque, proin bibendum diam.
+                            </p>
+                        </motion.div>
                         <div className="flex flex-col sm:flex-row gap-[120px] py-[60px] sm:my-[100px]">
                             {work.map((work: WorkType) => (
-                                <div className="flex flex-col sm:w-[50%]">
+                                <motion.div
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true, amount: 0.5 }}
+                                    transition={{ duration: 0.5 }}
+                                    variants={{
+                                        hidden: { opacity: 0 },
+                                        visible: { opacity: 1 }
+                                    }}
+                                    className="flex flex-col sm:w-[50%]">
                                     <img src={work.image} />
                                     <p className="text-[14px] italic">{work.date}</p>
                                     <p className="text-[24px] font-semibold">{work.title}</p>
                                     <p className="text-[18px]">{work.description}</p>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                     </Container>

@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import About from './scenes/about/About'
 import Contact from './scenes/contact/Contact'
-import Home from './scenes/home/Home'
 import Navbar from './scenes/navbar/Navbar'
 import Work from './scenes/work/Work'
+import Home from './scenes/home/Home'
 
 enum SelectedPage {
   Home = "home",
