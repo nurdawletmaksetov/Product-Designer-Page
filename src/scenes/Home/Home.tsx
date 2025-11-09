@@ -11,7 +11,7 @@ type Props = {
 const Home = ({ }: Props) => {
     return (
         <>
-            <section className="py-10">
+            <section id="home" className="py-10">
                 <Container>
                     <div className="sm:flex justify-between items-center">
                         <div className="md:w-[50%] mb-10 xs:mb-20">

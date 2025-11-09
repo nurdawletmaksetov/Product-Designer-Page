@@ -9,3 +9,9 @@ export interface WorkType {
     title: string;
     description: string;
 }
+
+export enum SelectedPage {
+    Home = "home",
+    About = "about",
+    Work = "work",
+}
